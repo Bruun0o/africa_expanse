@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belezas Naturais da África</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="#">África Natural</a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="origem.html">Origem</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><button onclick="alert('Explorar Destinos!')">Explorar</button></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <h1>África: o berço da humanidade</h1>
+            <p>A África é conhecida pela sua pluralidade étnica e cultural, e, por meio de uma história milenar, é capaz de contar a história de toda a humanidade.
+     </p>
+     <p> </p>
+        </div>
+        <img class="imgz" src="img/berço2.jpg" alt="">
+    </header>
+    <main>
+        
+        <section class="intro" id="sobre">
+            <h2>Sobre a África</h2>
+            <p> África é um dos seis continentes do mundo, sendo o terceiro maior em extensão territorial. O território estende-se por mais de 30 milhões de km², ocupando, aproximadamente, 20% da área continental da Terra. No continente vive mais de um bilhão de habitantes, fazendo dele o segundo mais populoso entre os demais.           </p>
+        </section>
+        <section class="gallery" id="projetos">
+            <h2>Pais multiculturalismo</h2>
+            <div class="gallery-container">
+                
+                <div class="gallery-item">
+                    <img src="img/baixados.jpeg" alt="Serengeti" onclick="openModal(this.src, 'Serengeti', 'Lar de uma das maiores migrações de animais do mundo.')">
+                    <h3>Abjalang</h3>
+                    <p>Abjalangues são uma tribo que vive na margem esquerda do Nilo Branco.</p>
+                    <button onclick="toggleInfo(this)">Mais Informações</button>
+                    <div class="hidden-info">São classificados como nueres ou dincas (há divergência nas fontes), dois grupos de povos nilóticos dos quais os primeiros pertencem aos segundos como subgrupo.</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/cultura2.jpeg" alt="Deserto do Saara" onclick="openModal(this.src, 'Deserto do Saara', 'O maior deserto quente do mundo.')">
+                    <h3>Akan</h3>
+                    <p>A cultura Akan é a mais dominante e evidente nos dias de hoje, em Gana.</p>
+                    <button onclick="toggleInfo(this)">Mais Informações</button>
+                    <div class="hidden-info">Algumas de suas mais importantes histórias mitológicas são chamadas Anansesem. Anansesem significa literalmente "a história da aranha".</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/cultura3.jpeg" alt="Victoria Falls" onclick="openModal(this.src, 'Victoria Falls', 'Uma das maiores quedas d’água do mundo.')">
+                    <h3>Aku</h3>
+                    <p>Os Aku são um grupo étnico minoritário da Gâmbia, representando provavelmente menos de 2% da população.</p>
+                    <button onclick="toggleInfo(this)">Mais Informações</button>
+                    <div class="hidden-info">Os Aku são descendentes de escravos libertos. Muitos falam Aku, uma Língua crioula à base de inglês</div>
+                </div>
+            </div>
+        </section>
+       
+        
+        <section class="footer">
+            <p>&copy; 2024 Belezas Naturais da África. Todos os direitos reservados.</p>
+        </section>
+    </main>
+
+   
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="modalCaption"></div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belezas Naturais da África</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="#">África Natural</a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="origem.html">Origem</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><button onclick="alert('Explorar Destinos!')">Explorar</button></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <h1>Ajuda humanitária é urgente na África Ocidental</h1>
+            <p>A meta da agência da ONU é ajudar os beneficiários a resistir aos choques e a satisfazer suas necessidades alimentares e nutricionais. O plano de apoio a toda a região carece de US$ 183,1 milhões para os próximos 12 meses.</p>
+        </div>
+        <img class="imgz" src="img/fome1.jpg" alt="">
+    </header>
+    <main>
+        <section class="intro" id="sobre">
+            <h2>Sobre a África</h2>
+            <p>"Apesar da enorme riqueza do continente, muitos países africanos apresentam baixos índices de desenvolvimento, com diversos problemas sociais, como a miséria, baixa qualidade de vida, subnutrição e o analfabetismo."
+
+            </p>
+            
+        </section>
+        <section class="gallery" id="projetos">
+            <h2>Dos 30 países mais pobres do mundo, 21 são africanos.
+
+                
+        </h2>
+            <div class="gallery-container">
+                <!-- Item 1 -->
+                <div class="gallery-item">
+                    <img src="img/real1.jpeg" alt="Serengeti" onclick="openModal(this.src, 'Serengeti', 'Lar de uma das maiores migrações de animais do mundo.')">
+                    <h3>Economia Africana</h3>
+                    <p>Muitos países são considerados subdesenvolvidos.</p>
+                                        <button onclick="toggleInfo(this)">Mais Informações</button>
+                    <div class="hidden-info">Índices econômicos e de desenvolvimento humano apontam que o continente africano é o mais pobre entre os continentes.
+
+                        </div>
+                </div>
+               
+                <div class="gallery-item">
+                    <img src="img/real2.jpeg" alt="Deserto do Saara" onclick="openModal(this.src, 'Deserto do Saara', 'O maior deserto quente do mundo.')">
+                    <h3>A piora da fome e subnutrição</h3>
+                    <p>A situação tem levado milhões de pessoas a abandonar seus campos.</p>
+                    <button onclick="toggleInfo(this)">Mais Informações</button>
+                    <div class="hidden-info">Na região do Sahel vivem 8,2 milhões de deslocados internos devido a conflitos. A violência no Sudão, na República Centro-Africana e na Nigéria forçou mais de 1 milhão de pessoas a entrar no Chade, o quinto maior anfitrião de refugiados do mundo.</div>
+                </div>
+              
+                <div class="gallery-item">
+                    <img src="img/guerra.jpg" alt="Victoria Falls" onclick="openModal(this.src, 'Victoria Falls', 'Uma das maiores quedas d’água do mundo.')">
+                    <h3>Conflitos armados.</h3>
+                    <p>. De acordo com o ACNUR, a África é o continente com o maior número de conflitos armados ativos.</p>
+                    <button onclick="toggleInfo(this)">Mais Informações</button>
+                    <div class="hidden-info">Especificamente, um total de 25 guerras ou conflitos. Os danos que a violência causa à população são aumentados pela duração desses conflitos que nunca terminam ou ressurgem de vez em quando.</div>
+                </div>
+            </div>
+        </section>
+        <section class="feedback" id="contato">
+            <h2>Deixe Seu Feedback</h2>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" placeholder="Escreva sua mensagem" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="feedbackMessage" class="feedback-message"></div>
+        </section>
+        <section class="footer">
+            <p>&copy; 2024 Belezas Naturais da África. Todos os direitos reservados.</p>
+        </section>
+    </main>
+
+    
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="modalCaption"></div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
